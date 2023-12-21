@@ -21,7 +21,6 @@ User Stories : As a user I would like to
     -Remove players from my favorites
 
 
-
 Wireframe :
 
 
