@@ -23,7 +23,10 @@ As a user I would like to:
 
 
 
-Wireframe
+Wireframe:
+
+<img width="445" alt="Screenshot 2023-12-21 at 3 49 02 PM" src="https://github.com/juancruza46/playersApp/assets/150645094/277cdaed-fcce-4335-b4df-fde09fe338c6">
+
 
 ERD:
 
