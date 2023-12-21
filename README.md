@@ -25,5 +25,3 @@ As a user I would like to:
 
 Wireframe:
 
-
-
