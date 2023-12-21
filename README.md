@@ -1,15 +1,16 @@
-Title : playersApp
+Title: playersApp
 
-About : Following the world of soccer can be ovewhelming trying to keep track of all the best players. The following app, will be apple to hold a data-base of players, and filter out the search by: position, nationality, team, etc. While still displaying  basic info such as :age, name , & current shirt number.
+About: Following the world of soccer can be ovewhelming trying to keep track of all the best players. The following app, will be apple to hold a data-base of players, and filter out the search by: position, nationality, team, etc. While still displaying  basic info such as :age, name , & current shirt number.
 
 Additional fetures include: favorite list, & a community review section, where you can leave reviews based on their recent performances.
 
-Technologies used : 
+Technologies used: 
     -Node.js
     -Express.js
     -MongoDB
 
-User Stories : As a user I would like to
+User Stories:
+As a user I would like to: 
     -Securley sign up
     -Sign in 
     -Sign out 
@@ -22,7 +23,7 @@ User Stories : As a user I would like to
 
 
 
-Wireframe :
+Wireframe:
 
 
 
