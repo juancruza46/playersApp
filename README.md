@@ -29,5 +29,18 @@ USE STORIES - AS A USER I WOULD LIKE TO:
 
 //----------------
 
-Wireframe:
+WIREFRAME:
+
+<img width="445" alt="Screenshot 2023-12-21 at 3 49 02 PM" src="https://github.com/juancruza46/playersApp/assets/150645094/91c2ab43-deea-495e-b30d-2257ad68e06a">
+
+//----------------
+
+EDR:
+
+
+<img width="463" alt="Screenshot 2023-12-21 at 3 36 27 PM" src="https://github.com/juancruza46/playersApp/assets/150645094/a87a6c8b-f8b2-4c59-bae5-a65ad590c2f8">
+
+
+
+
 
