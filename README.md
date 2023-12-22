@@ -9,7 +9,7 @@ Additional fetures include: favorite list, & a community review section, where y
 
 //----------------
 
-TECHMOLOGIES USED: 
+TECHNOLOGIES USED: 
 Node.js 
 Express.js 
 MongoDB
@@ -19,7 +19,8 @@ CSS
 
 USE STORIES - AS A USER I WOULD LIKE TO: 
 -Securley sign up 
--Sign in -Sign out 
+-Sign in 
+-Sign out 
 -Search through a list of player names 
 -Add favorites 
 -Comment on players I dislike 
@@ -35,7 +36,7 @@ WIREFRAME:
 
 //----------------
 
-EDR:
+ERD:
 
 <img width="560" alt="Screenshot 2023-12-22 at 11 24 46 AM" src="https://github.com/juancruza46/playersApp/assets/150645094/2a16906e-3066-4aed-8760-3589565dfa26">
 
