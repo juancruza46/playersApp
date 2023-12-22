@@ -10,10 +10,10 @@ Additional fetures include: favorite list, & a community review section, where y
 //----------------
 
 TECHMOLOGIES USED: 
--Node.js 
--Express.js 
--MongoDB
--CSS
+Node.js 
+Express.js 
+MongoDB
+CSS
 
 //----------------
 
