@@ -7,7 +7,7 @@ require('dotenv').config()
 const methodOverride = require('method-override')
 
 //Middleware function
-const Middleware = (app) => {
+const middleware = (app) => {
     app.use(methodOverride('_method'))
     app.use(express.urlencoded({extended: true}))
     app.use(morgan('tiny'))
