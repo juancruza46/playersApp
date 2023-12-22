@@ -37,7 +37,8 @@ WIREFRAME:
 
 EDR:
 
-<img width="400" alt="Screenshot 2023-12-21 at 10 51 40 PM" src="https://github.com/juancruza46/playersApp/assets/150645094/595b5d48-bd8a-4aab-8814-3eeda77b3921">
+<img width="560" alt="Screenshot 2023-12-22 at 11 24 46 AM" src="https://github.com/juancruza46/playersApp/assets/150645094/2a16906e-3066-4aed-8760-3589565dfa26">
+
 
 
 
