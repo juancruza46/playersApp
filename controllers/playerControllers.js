@@ -1,4 +1,12 @@
 //Impport Dependencies
+const express = require('express')
+const axios = require('axios')
+//const allPLayersURL in .env
+//nationalitySearchUrl
+//positionSearchUrl
+//teamSearchUrl
+const Player = require('..models/player')
+
 
 //Create Router
 const router = express.Router()
@@ -23,16 +31,20 @@ const router = express.Router()
 //Removed from favs
 
 //-------------------------------------------------------
-//GET players-name
-//API data will show players when searched by nationality
+//GET players
+//API data will show players when searched by NATIONALITY
 //Give user player bio when found
 //Render on a show page
 //Found or display error page
 
-//GET players-name
-//API data will show players when searched by position
+//GET players
+//API data will show players when searched by POSITION
 //Give user player bio when found
 //Found or display error page
 
+//GET players
+//API data will show players when searched by TEAM
+//Give user player bio when found
+//Found or display error page
 //Export router
 module.exports = router
