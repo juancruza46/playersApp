@@ -42,12 +42,12 @@ ERD:
 
 <img width="560" alt="Screenshot 2023-12-22 at 11 24 46 AM" src="https://github.com/juancruza46/playersApp/assets/150645094/2a16906e-3066-4aed-8760-3589565dfa26">
 
-Icebox:
+ICEBOX:
 
 - A rating system will be added where users can rate a players performance based on live games.
 - A global chat, where customers can open threads based on players interested in.
-- Have multiple saved "wishlists"
-- Add a fantasy team systen 
+- Have multiple saved "wishlists".
+- Add a fantasy team system.
 
 
 
