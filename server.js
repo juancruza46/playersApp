@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
     session({
-        secret: 'testing',
+        secret: process.env.SESSION_SECRET || 'your_secret_key',
         resave: true,
         saveUninitialized: true,
         cookie: { secure: false },
@@ -33,7 +33,7 @@ middleware(app)
 
 //Routes
 app.use('/', require('./routes/homeRoutes'));
-app.use('/all-players', require('./routes/allPlayersRoutes'));
+app.use('/allPlayers', require('./routes/allPlayersRoutes'));
 app.use('/my-players', require('./routes/myPlayersRoutes'));
 app.use('/search-players', require('./routes/searchPlayersRoutes'));
 

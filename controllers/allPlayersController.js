@@ -1,11 +1,20 @@
 //all db players 
 const Player = require('../models/player');
 
-class allPLayersController {
-    getAllPlayers (req,res){
+class allPlayersController {
+    async getAllPlayers(req, res) {
+        try {
+            // Fetch players from the database
+            const players = await Player.find();
 
-        res.send ('All PLayers Page');
+            // Render the view with player data
+            res.render('allPlayers', { title: 'All Players', navbar: 'navbar', playerData: players });
+        } catch (error) {
+            // Handle error
+            console.error(error);
+            res.status(500).send('Internal Server Error');
+        }
     }
 }
 
-module.exports = new allPLayersController();
+module.exports = new allPlayersController();
