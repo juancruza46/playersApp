@@ -3,13 +3,26 @@ const express = require('express')
 require('dotenv').config()
 const path = require('path')
 const middleware = require('./utils/middleware')
+const session = require('express-session');
 
-//Import Routers
-const UserRouter = require('./controllers/userControllers')
-const PlayerRouter = require('./controllers/playerControllers')
+//Import Routes
+const homeRoutes = require('./routes/homeRoutes');
+const allPlayersRoutes = require('./routes/allPlayersRoutes');
+const myPlayersRoutes = require('./routes/myPlayersRoutes');
+const searchPlayersRoutes = require('./routes/searchPlayersRoutes');
 
 //Create the object
 const app = express()
+const PORT = process.env.PORT || 3000;
+
+app.use(
+    session({
+        secret: 'testing',
+        resave: true,
+        saveUninitialized: true,
+        cookie: { secure: false },
+    })
+);
 
 //View engine
 app.set('views', path.join(__dirname, 'views'))
@@ -19,22 +32,12 @@ app.set('view engine', 'ejs')
 middleware(app)
 
 //Routes
-app.get('/', (req, res) => {
-    const { username, loggedIn, userId } = req.session
-    res.render('home.ejs', {username,loggedIn, userId})
-})
-
-app.use('/users', UserRouter)
-app.use('/players', PlayerRouter)
-
-app.get('/error', (req, res) => {
-    const error = req.query.error || 'Error Found! Please try again later.'
-    const { username, loggedIn, userId } = req.session
-    res.render('error.ejs', { error, userId, username, loggedIn })
-})
+app.use('/', require('./routes/homeRoutes'));
+app.use('/all-players', require('./routes/allPlayersRoutes'));
+app.use('/my-players', require('./routes/myPlayersRoutes'));
+app.use('/search-players', require('./routes/searchPlayersRoutes'));
 
 //Server Listener
-const PORT = process.env.PORT
 app.listen(PORT, () =>{
     console.log('Server running like Usain Bolt!')
 })
