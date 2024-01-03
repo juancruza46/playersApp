@@ -34,8 +34,8 @@ middleware(app)
 //Routes
 app.use('/', require('./routes/homeRoutes'));
 app.use('/allPlayers', require('./routes/allPlayersRoutes'));
-app.use('/my-players', require('./routes/myPlayersRoutes'));
-app.use('/search-players', require('./routes/searchPlayersRoutes'));
+app.use('/myPlayers', require('./routes/myPlayersRoutes'));
+app.use('/searchPlayers', require('./routes/searchPlayersRoutes'));
 
 //Server Listener
 app.listen(PORT, () =>{
