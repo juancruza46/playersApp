@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 //Schema defintion 
 const playerSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    age: { type: Number, required: true },
-    info: { type: String },
+    position: { type: String },
+    nationality: { type: String },
+    shirtNumber: { type: Number },
+    isFavorite: { type: Boolean, default: false },
 });
 
 //Create user model 
