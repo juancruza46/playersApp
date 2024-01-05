@@ -39,3 +39,40 @@ nav li a:hover {
 h1 {
     text-align: center;
 }
+
+/*----Style all players info----*/
+
+.player-chart {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.player-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.player-name {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.player-info {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.info-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.info-value {
+    color: #555;
+}

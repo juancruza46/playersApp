@@ -2,11 +2,21 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-//Database Setup
+//Database connection
+const DATABASE_URL = process.env.DATABASE_URL
 
-//Message DB
+const CONFIG = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}
 
-//Mongoose function
+//connect
+mongoose.connect(DATABASE_URL, CONFIG)
 
-//Export
+//log actions 
+mongoose.connection
+    .on('open', () => console.log('Connected to Mongoose'))
+    .on('close', () => console.log('Disconnected from Mongoose'))
+    .on('error', (err) => console.log('An error occurred: \n', err))
+
 module.exports = mongoose

@@ -10,7 +10,12 @@
     <body>
         
         <%- include('navbar') %>
-        <%= body %>
+
+         <% if (typeof body !== 'undefined') { %>
+            <%= body %>
+        <% } else { %>
+            <h1>No Content</h1>
+        <% } %>
     
     </body>
 </html> 

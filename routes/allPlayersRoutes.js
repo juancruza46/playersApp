@@ -3,9 +3,7 @@ const express = require('express');
 const router = express.Router();
 const allPlayersController = require('../controllers/allPlayersController');
 
-//test for working connection
-router.get('/', (req, res) => {
-    res.render('allPlayers', { title: 'All Players', body: '' });
-});
+//get all playerss
+router.get('/', allPlayersController.getAllPlayers);
 
 module.exports = router;

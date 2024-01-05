@@ -1,9 +1,4 @@
-<%- include('./partials/header') %>
+<%- include('layout', { title: 'Error' }) %>
 
-    <div class="container-sm">
-        <h2>Page failed to load !</h2>
-        <p><%= error has occured %></p>
-        <a href="/" class="btn btn-warning">Go Back Home</a>
-    </div>
-
-<%- include('./partials/footer') %>
+<h1>Error</h1>
+<p><%= error.message %></p>
