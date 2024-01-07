@@ -5,7 +5,10 @@ const Player = require('../models/player');
 class allPlayersController {
     async getAllPlayers(req, res) {
         try {
-            const randomPlayerIds = [44, 2, 100];
+            const randomPlayerIds = 
+                [44, 49, 3218, 
+                39635, 1556, 125010, 
+                133860, 16, 3306  ];
             const randomPlayers = [];
 
             for (const id of randomPlayerIds) {

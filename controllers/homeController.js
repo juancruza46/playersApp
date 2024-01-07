@@ -5,4 +5,5 @@ class homeController {
     }
 }
 
+
 module.exports = new homeController();
