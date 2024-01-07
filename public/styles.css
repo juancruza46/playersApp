@@ -51,16 +51,18 @@ h1 {
 }
 
 .player-card {
+    height: 200px;
     width: 200px;
-    border: 1px solid #ccc;
+    border: 1vmin solid #ccc;
     padding: 15px;
     margin: 10px;
     text-align: center;
+    background-color: green;
 }
 
 .player-name {
     margin-bottom: 10px;
-    color: #333;
+    color: black;
 }
 
 .player-info {
@@ -74,7 +76,7 @@ h1 {
 }
 
 .info-value {
-    color: #555;
+    color: yellow;
 }
 
 /*----Style the Home Page----*/

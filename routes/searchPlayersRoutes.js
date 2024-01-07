@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const searchPlayersController = require('../controllers/searchPlayersController');
 
-router.get('/', searchPlayersController.getSearchPlayers);
+router.get('/', searchPlayersController.searchPlayers);
+
 
 module.exports = router;

@@ -1,2 +1,32 @@
 <%- include('layout', { title: 'Search Players' }) %>
-<h1>Search Players Page</h1>
+
+<h1>Search Players</h1>
+
+<form action="/searchPlayers" method="GET">
+    <label for="name">Name:</label>
+    <input type="text" name="name">
+
+    <label for="position">Position:</label>
+    <input type="text" name="position">
+
+    <label for="nationality">Nationality:</label>
+    <input type="text" name="nationality">
+
+    <label for="shirtNumber">Shirt Number:</label>
+    <input type="number" name="shirtNumber">
+
+    <button type="submit">Search</button>
+</form>
+
+<div class="player-list">
+    <% players.forEach(player => { %>
+        <div class="player-card">
+            <h2 class="player-name"><%= player.name %></h2>
+            <p class="player-info">
+                <span class="info-label">Position:</span> <span class="info-value"><%= player.position %></span><br>
+                <span class="info-label">Nationality:</span> <span class="info-value"><%= player.nationality %></span><br>
+                <span class="info-label">Shirt No:</span> <span class="info-value"><%= player.shirtNumber %></span><br>
+            </p>
+        </div>
+    <% }); %>
+</div>
