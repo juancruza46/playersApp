@@ -2,16 +2,15 @@
 
 <h1>All Players Page</h1>
 
-
-<div class ="player-chart">
-     <% randomPlayers.forEach(player => { %>
-            <div class="player-card ">
-                <h2 class ="player-name"><%= player.name %></h2>
-                <p class ="player-info">
-                    <span class="info-label">Position:</span> <span class="info-value"><%= player.position %></span><br>
-                    <span class="info-label">Nationality:</span> <span class="info-value"><%= player.nationality %></span><br>
-                    <span class="info-label">Shirt No:</span> <span class="info-value"><%= player.shirtNumber %></span><br>
-                </p>
-            </div>
+<div class="player-chart">
+    <% specificPlayers.forEach(player => { %>
+        <div class="player-card">
+            <h2 class="player-name"><%= player.name %></h2>
+            <p class="player-info">
+                <span class="info-label">Position:</span> <span class="info-value"><%= player.position %></span><br>
+                <span class="info-label">Nationality:</span> <span class="info-value"><%= player.nationality %></span><br>
+                <span class="info-label">Shirt No:</span> <span class="info-value"><%= player.shirtNumber %></span><br>
+            </p>
+        </div>
     <% }); %>
 </div>
