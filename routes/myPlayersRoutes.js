@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Player = require('../models/player');
+const addPlayersController = require('../controllers/addPlayersController');
 
 // Render the myPlayers page
 router.get('/', async (req, res) => {
