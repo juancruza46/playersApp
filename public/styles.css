@@ -150,3 +150,15 @@ body {
 .add-player-form button:hover {
     background-color: #555;
 }
+/*----Delete Form----*/
+.delete-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-form {
+    margin-top: 10px;
+}

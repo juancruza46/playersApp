@@ -1,8 +1,8 @@
 // myPlayersRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const Player = require('../models/player');
-const addPlayersController = require('../controllers/addPlayersController');
 
 // Render the myPlayers page
 router.get('/', async (req, res) => {
@@ -15,4 +15,17 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Handle the deletion of a player
+router.delete('/:id', async (req, res) => {
+    try {
+        await Player.findByIdAndDelete(req.params.id);
+        res.redirect('/myPlayers');
+    } catch (err) {
+        console.error('Error deleting player:', err);
+        res.status(500).send('Error deleting player');
+    }
+});
+
 module.exports = router;
+
+
