@@ -4,8 +4,19 @@
 
 <h1>My Players</h1>
 
-<ul>
-    <% players.forEach(player => { %>
-        <li><%= player.name %> - <%= player.position %> - <%= player.nationality %> - <%= player.shirtNumber %></li>
+<div class="player-chart">
+    <% players.forEach((player, index) => { %>
+        <div class="player-card">
+            <h2 class="player-name"><%= player.name %></h2>
+            <p class="player-info">
+                <span class="info-label">Position:</span> <span class="info-value"><%= player.position %></span><br>
+                <span class="info-label">Nationality:</span> <span class="info-value"><%= player.nationality %></span><br>
+                <span class="info-label">Shirt No:</span> <span class="info-value"><%= player.shirtNumber %></span><br>
+            </p>
+        </div>
+
+        <% if ((index + 1) % 3 === 0) { %>
+            </div><div class="player-chart">
+        <% } %>
     <% }); %>
-</ul>
+</div>
