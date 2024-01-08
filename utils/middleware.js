@@ -1,30 +1,45 @@
-//Import Dependencies
-const express = require('express')
-const morgan = require('morgan')
-const session = require('express-session')
-const MongoStore = require('connect-mongo')
-require('dotenv').config()
-const methodOverride = require('method-override')
+// utils/middleware.js
 
-//Middleware function
+const express = require('express');
+const morgan = require('morgan');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+require('dotenv').config();
+const methodOverride = require('method-override');
+const passport = require('passport');
+
+const isAuthenticated = (req, res, next) => {
+    // Check if the user is authenticated, for example using passport or your own authentication logic
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login'); // Redirect to login if not authenticated
+};
+
 const middleware = (app) => {
-    app.use(methodOverride('_method'))
-    app.use(express.urlencoded({extended: true}))
-    app.use(morgan('tiny'))
-    app.use(express.static('public'))
-    app.use(express.json())
+    app.use(methodOverride('_method'));
+    app.use(express.urlencoded({ extended: true }));
+    app.use(morgan('tiny'));
+    app.use(express.static('public'));
+    app.use(express.json());
 
     app.use(
         session({
-            secret: process.env.SECRET,
+            secret: process.env.SESSION_SECRET || 'your_secret_key',
             store: MongoStore.create({
                 mongoUrl: process.env.DATABASE_URL
             }),
             saveUninitialized: true,
             resave: false
         })
-    )
-}
+    );
 
-//Export
-module.exports = middleware
+    app.use(passport.initialize());
+    app.use(passport.session());
+};
+
+module.exports = {
+    isAuthenticated,
+    middleware
+   
+};

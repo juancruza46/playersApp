@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= title %></title>
-        <link rel="stylesheet" type="text/css" href="/styles.css">
-    </head>
-    
-    <body>
-        
-        <%- include('navbar') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
 
-         <% if (typeof body !== 'undefined') { %>
+<body>
+    <!-- Include the navbar.ejs file -->
+    <%- include('navbar') %>
+
+    <!-- Main content -->
+    <div class="content">
+        <% if (typeof body !== 'undefined') { %>
             <%= body %>
         <% } else { %>
-            
+            <!-- Default content if body is not defined -->
+            <h1>Default Content</h1>
         <% } %>
-    
-    </body>
-</html> 
+    </div>
+</body>
+</html>
