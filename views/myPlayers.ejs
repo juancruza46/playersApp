@@ -1,3 +1,11 @@
+<!-- myPlayers.ejs -->
+
 <%- include('layout', { title: 'My Players' }) %>
 
-<h1>My Players Page</h1>
+<h1>My Players</h1>
+
+<ul>
+    <% players.forEach(player => { %>
+        <li><%= player.name %> - <%= player.position %> - <%= player.nationality %> - <%= player.shirtNumber %></li>
+    <% }); %>
+</ul>

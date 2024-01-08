@@ -1,9 +1,9 @@
-//home page 
-class homeController {
+// homeController.js
+
+class HomeController {
     getHome(req, res) {
-        res.send('home');
+        res.render('home', { title: 'Home Page' });
     }
 }
 
-
-module.exports = new homeController();
+module.exports = new HomeController();

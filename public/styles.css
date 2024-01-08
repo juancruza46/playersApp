@@ -96,3 +96,57 @@ body {
     padding: 20px;
     margin: 20px;
 }
+
+/*----Style my players info----*/
+
+.my-players {
+    text-align: center;
+    margin: 20px;
+}
+
+.my-players ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.my-players li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: green;
+    color: black;
+}
+
+/*----Style add player form----*/
+
+.add-player-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: green;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.add-player-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.add-player-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.add-player-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-player-form button:hover {
+    background-color: #555;
+}

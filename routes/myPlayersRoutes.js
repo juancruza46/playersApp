@@ -1,8 +1,17 @@
-// my players routes
+// myPlayersRoutes.js
 const express = require('express');
 const router = express.Router();
-const myPlayersController = require('../controllers/myPlayersController');
+const Player = require('../models/player');
 
-router.get('/', myPlayersController.getMyPlayers);
+// Render the myPlayers page
+router.get('/', async (req, res) => {
+    try {
+        const players = await Player.find({});
+        res.render('myPlayers', { title: 'My Players', players });
+    } catch (err) {
+        console.error('Error fetching players:', err);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 module.exports = router;

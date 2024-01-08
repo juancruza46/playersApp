@@ -1,0 +1,24 @@
+<!-- views/addPlayers.ejs -->
+<%- include('layout', { title: 'Add Player' }) %>
+
+<h1>Add Player</h1>
+<form action="/addPlayers" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position">
+    <br>
+
+    <label for="nationality">Nationality:</label>
+    <input type="text" id="nationality" name="nationality">
+    <br>
+
+    <label for="shirtNumber">Shirt Number:</label>
+    <input type="number" id="shirtNumber" name="shirtNumber">
+    <br>
+
+    <button type="submit">Add Player</button>
+</form>
+
