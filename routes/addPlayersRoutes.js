@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Player = require('../models/player'); // Make sure the path is correct
+const Player = require('../models/player');
 
 router.get('/', (req, res) => {
     res.render('addPlayers', { title: 'Add Player' });
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         console.error(error);
 
         if (error.name === 'MongoError' && error.message.includes('timed out')) {
-            // Handle timeout error
+            
             res.status(500).render('error', { title: 'Error', error: 'MongoDB operation timed out' });
         } else {
             res.status(500).render('error', { title: 'Error', error });

@@ -1,13 +1,14 @@
+//----Declare dependencies----
 const Player = require('../models/player');
 
+//----Create a class ----
 class MyPlayersController {
     async getMyPlayers(req, res) {
         try {
             // Fetch all players from the database
             const players = await Player.find();
 
-            // You can add additional logic here if needed
-
+            //Renders all created players
             res.render('myPlayers', { title: 'My Players', players });
         } catch (error) {
             console.error(error);
@@ -15,5 +16,5 @@ class MyPlayersController {
         }
     }
 }
-
+//----Export module ----
 module.exports = new MyPlayersController();

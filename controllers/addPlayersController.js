@@ -1,17 +1,22 @@
+//----Declare dependencies----
 const axios = require('axios');
 const Player = require('../models/player');
 
+
+//----Create a class ----
 class AddPlayersController {
     getAddPlayersPage(req, res) {
         res.render('addPlayers', { title: 'Add Player' });
     }
 
+    //awknowledge player created
     async addPlayers(req, res) {
         try {
             console.log('Form submitted!');
             const { name, position, nationality, shirtNumber } = req.body;
 
             // Save the player to the database
+            //properties
             const newPlayer = new Player({
                 name,
                 position,
@@ -21,6 +26,7 @@ class AddPlayersController {
 
             await newPlayer.save();
 
+            //send to new page
             res.redirect('/myPlayers');
         } catch (error) {
             console.error(error);
@@ -48,6 +54,7 @@ class AddPlayersController {
 
 }
 
+//----Export module -----
 module.exports = new AddPlayersController();
 
 

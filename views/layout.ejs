@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!-- Include the navbar.ejs file -->
+
     <%- include('navbar') %>
 
     <!-- Main content -->
@@ -16,7 +16,6 @@
         <% if (typeof body !== 'undefined') { %>
             <%= body %>
         <% } else { %>
-            <!-- Default content if body is not defined -->
             <h1>Default Content</h1>
         <% } %>
     </div>

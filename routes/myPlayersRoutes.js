@@ -1,5 +1,4 @@
-// myPlayersRoutes.js
-
+//---- Declare Dependencies ----
 const express = require('express');
 const router = express.Router();
 const Player = require('../models/player');
@@ -25,7 +24,7 @@ router.delete('/:id', async (req, res) => {
         res.status(500).send('Error deleting player');
     }
 });
-
+ //---- Export module ----
 module.exports = router;
 
 

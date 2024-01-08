@@ -88,6 +88,7 @@ app.use((req, res, next) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+//----login feature ----
 app.get('/login', (req, res) => {
     res.render('login');
 });
@@ -101,6 +102,8 @@ app.post(
     })
 );
 
+
+//----Sign up feature ----
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
