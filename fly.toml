@@ -1,17 +1,12 @@
-# fly.toml app configuration file generated for playersapp on 2024-01-05T14:34:53-05:00
+# fly.toml app configuration file generated for playersapp-dark-darkness-2118 on 2024-01-08T03:44:41-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "playersapp"
+app = "playersapp-dark-darkness-2118"
 primary_region = "ewr"
 
-[env]
-DATABASE_URL="mongodb+srv://juan:Cruz99@cluster0.e0ksfqm.mongodb.net/playersApp?retryWrites=true&w=majority"
-FOOTBALL_API_KEY="bf6310ff8b9846f68840f5d31f1550e6"
-API_BASE_URL="http://api.football-data.org/"
-PLAYER_INFO_URL="http://api.football-data.org/v4/persons{id}"
-
+[build]
 
 [http_service]
   internal_port = 3000
@@ -25,3 +20,10 @@ PLAYER_INFO_URL="http://api.football-data.org/v4/persons{id}"
   cpu_kind = "shared"
   cpus = 1
   memory_mb = 1024
+ 
+ [env]
+  PORT="3080"
+  DATABASE_URL="mongodb+srv://juan:Cruz99@cluster0.e0ksfqm.mongodb.net/playersApp?retryWrites=true&w=majority"
+FOOTBALL_API_KEY="bf6310ff8b9846f68840f5d31f1550e6"
+API_BASE_URL="http://api.football-data.org/"
+PLAYER_INFO_URL="http://api.football-data.org/v4/persons{id}"
