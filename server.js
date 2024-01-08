@@ -118,11 +118,15 @@ app.post('/signup', async (req, res) => {
     }
 });
 
+//----Log out feature ----
 app.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('/');
+    req.logout((err) => {
+        if (err) {
+            return next(err);
+        }
+        res.redirect('/');
+    });
 });
-
 //---- Start Server ----
 const PORT = process.env.PORT || 3000;
 
