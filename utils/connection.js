@@ -7,7 +7,8 @@ const DATABASE_URL = process.env.DATABASE_URL
 
 const CONFIG = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false,
 }
 
 //connect

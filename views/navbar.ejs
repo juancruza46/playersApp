@@ -1,9 +1,15 @@
-<nav class = "navbar">
+<nav class="navbar">
     <ul>
         <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/allPlayers" class="nav-link"> All Players</a></li>
-        <li><a href="/myPlayers" class="nav-link">My Players</a></li>
+        <li><a href="/allPlayers" class="nav-link">All Players</a></li>
+        <li><a href="/myPlayers" class="nav-link">Community Players</a></li>
         <li><a href="/addPlayers" class="nav-link">Add New Players</a></li>
-        <li><a href="/logout" class="nav-link">Log Out</a></li>
+
+        <% if (isLoggedIn) { %>
+            <li><a href="/logout" class="nav-link">Logout</a></li>
+        <% } else { %>
+            <li><a href="/signup" class="nav-link">Sign Up</a></li>
+            <li><a href="/login" class="nav-link">Login</a></li>
+        <% } %>
     </ul>
 </nav>
