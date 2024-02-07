@@ -31,6 +31,15 @@ USE STORIES - AS A USER I WOULD LIKE TO:
 
 //----------------
 
+SCREENSHOTS:
+
+![Screenshot 2024-02-07 at 5 00 25 PM](https://github.com/juancruza46/playersApp-Project-2/assets/150645094/6ddd1f1b-a9a9-4341-ae33-2c312716ccb4)
+
+![Screenshot 2024-02-07 at 5 00 56 PM](https://github.com/juancruza46/playersApp-Project-2/assets/150645094/88a72663-289b-4605-9471-f19d9a0f12d6)
+
+![Screenshot 2024-02-07 at 5 01 33 PM](https://github.com/juancruza46/playersApp-Project-2/assets/150645094/1231b680-7db1-4faa-86a2-cdcef680a5fe)
+
+//----------------
 WIREFRAME:
 
 <img width="445" alt="Screenshot 2023-12-21 at 3 49 02 PM" src="https://github.com/juancruza46/playersApp/assets/150645094/91c2ab43-deea-495e-b30d-2257ad68e06a">
